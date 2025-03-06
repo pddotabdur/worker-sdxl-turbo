@@ -23,7 +23,7 @@ def handler(job):
 
     time_start = time.time()
     image = pipe(prompt=prompt, num_inference_steps=1, guidance_scale=0.0).images[0]
-    print(f"Time taken: {time.time() - time_start}")
+    print(f"Total Time taken: {time.time() - time_start}")
 
     buffer = io.BytesIO()
     image.save(buffer, format="PNG")
